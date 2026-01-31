@@ -5,9 +5,33 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Outside_House.unity
+    guid: e1076a2f74c110c4b8dddcb16d95c315
+  - enabled: 1
+    path: Assets/Scenes/SceneBedroom.unity
+    guid: c2726949d2db28846a30a65c73142dbc
+  - enabled: 1
+    path: Assets/Scenes/Town.unity
+    guid: cef8e8d86c937534e97c76b8f4b21966
+  - enabled: 1
+    path: Assets/Scenes/Well.unity
+    guid: 44f31f12b2532004f829089e3b041393
+  - enabled: 1
+    path: Assets/Scenes/SceneLibrary.unity
+    guid: df5f33a304f01f140afcede2c515811e
+  - enabled: 1
+    path: Assets/Scenes/SceneBoss.unity
+    guid: ac85ac2208955284d957cb2638c4a894
+  - enabled: 1
+    path: Assets/Scenes/SceneBasement.unity
+    guid: 791eaddb426c1f049bda8cb6d71e538b
+  - enabled: 1
+    path: Assets/Scenes/Cave_Entrance.unity
+    guid: 7451b8b3ce2e40b4d8221c0037ce05fb
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -41,11 +42,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackBackground
+    uniqueID: 234007807
+    locked: 0
   - name: Background
     uniqueID: 303576297
     locked: 0
   - name: Ground
     uniqueID: 1270993353
+    locked: 0
+  - name: GroundDetails
+    uniqueID: 2883163193
     locked: 0
   - name: Player
     uniqueID: 1649570061
@@ -56,7 +63,7 @@ TagManager:
   - name: Foreground
     uniqueID: 1742760361
     locked: 0
-  - name: absolute front
+  - name: ForeForeground
     uniqueID: 3450859791
     locked: 0
   m_RenderingLayers:

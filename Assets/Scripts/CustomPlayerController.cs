@@ -181,4 +181,12 @@ public class CustomPlayerController : MonoBehaviour
          animator?.SetTrigger(DodgeHash);
       }
    }
+
+   public void OnInteract(InputAction.CallbackContext context)
+   {
+      if (context.performed)
+      {
+         InteractionManager.Instance.Interact();
+      }
+   }
 }
