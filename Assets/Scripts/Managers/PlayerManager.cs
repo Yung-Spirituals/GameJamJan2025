@@ -11,6 +11,7 @@ public class PlayerManager : MonoBehaviour
       {
          Instance = this;
          player = GameObject.FindWithTag("Player");
+         DontDestroyOnLoad(gameObject);
       }
       else
       {

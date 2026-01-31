@@ -13,6 +13,7 @@ public class UserInterfaceManager : MonoBehaviour
       if (Instance == null)
       {
          Instance = this;
+         DontDestroyOnLoad(gameObject);
       }
       else
       {

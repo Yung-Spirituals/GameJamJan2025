@@ -12,6 +12,7 @@ public class ProgressManager : MonoBehaviour
       {
          Instance = this;
          progressFlags = new Dictionary<string, bool>();
+         DontDestroyOnLoad(gameObject);
       }
       else
       {
