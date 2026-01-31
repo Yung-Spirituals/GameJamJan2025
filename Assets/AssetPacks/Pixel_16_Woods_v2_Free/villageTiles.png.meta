@@ -1,0 +1,1008 @@
+fileFormatVersion: 2
+guid: a7b4fe77dd2db1247bb5d30d8ce3d515
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -421677034581918599
+    second: HousesVillage_0
+  - first:
+      213: -1343588281682708990
+    second: HousesVillage_1
+  - first:
+      213: 1176288563293651165
+    second: HousesVillage_2
+  - first:
+      213: 2977725212147215672
+    second: HousesVillage_3
+  - first:
+      213: 2386363946170743164
+    second: HousesVillage_4
+  - first:
+      213: 4079029352220758211
+    second: HousesVillage_5
+  - first:
+      213: -337998336097327994
+    second: HousesVillage_6
+  - first:
+      213: -4026953277915790770
+    second: HousesVillage_7
+  - first:
+      213: 3072319576089932737
+    second: HousesVillage_8
+  - first:
+      213: -3225630100606599950
+    second: HousesVillage_9
+  - first:
+      213: 1433316013854498602
+    second: HousesVillage_10
+  - first:
+      213: 2952843547794165299
+    second: HousesVillage_11
+  - first:
+      213: -1946404404243676131
+    second: HousesVillage_12
+  - first:
+      213: 5113287322643018824
+    second: HousesVillage_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: villageTiles_28
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aadb1ce0e609b8741a0b604cb66a0357
+      internalID: 211800626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_29
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6c7cac2b3e8774c9f443f83d19fb4f
+      internalID: 2018299344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_30
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278226fb8bd67e34e9df90a215295f0c
+      internalID: 986176533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_31
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9facb65b83f55c24699e866cd4f4aed2
+      internalID: 916908398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_32
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263076a8b52ba5d40b2eea1d4ccc2aee
+      internalID: 406584125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_33
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37eda6255d4a43f4fba1dfac0a7e4cad
+      internalID: 792771521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_52
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332d4023d244d0e4a86d42834f79f6c2
+      internalID: 447191532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_53
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 906fe2fca42a0634c8ca8f35c0bb614a
+      internalID: 988298815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_54
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4fe10ef4965f0344a32411b358dda17
+      internalID: -519905567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_55
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03c56e929c1fb347ad9f20d0fd7d6af
+      internalID: 290834855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_56
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 240
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f856459eccdc1547a8e4879fbbc4e35
+      internalID: 2057654853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_75
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e148d8e91cc55ea4695e387c547d1fd8
+      internalID: 774586604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_76
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eefa12ce327a6345b2d01efe5366489
+      internalID: -897155309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_77
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 477a282562e482747b6b46e8129a5896
+      internalID: 1068118568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_78
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76bb9e71c2c526c4c8e3f4faa9142b95
+      internalID: -1242303135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_79
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968cf38f529a6a044a7611edba2eb682
+      internalID: 48575279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_80
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8301d6ebc07f5b6498166e80559eb966
+      internalID: -700497348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_81
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f626ceb1dbd842c41b639775e1cbb47a
+      internalID: -1880213035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_82
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e35dadd1d6d44498782dccadef9040
+      internalID: 254821490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_99
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ebaca2a92ed8649a317d3c46c42d39
+      internalID: 1978439006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_100
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28431996d55a66943bcfaa37e325f79c
+      internalID: -820638666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_101
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed0c43363fff67f48b0db4d8bd493589
+      internalID: -2114609106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_102
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473298a0271956f42b9113592bb0450a
+      internalID: 928821646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_103
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501fbda833ce3bf49a1891db13e0de2d
+      internalID: -683718602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_110
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eefe0ccc1b90624bb93047b9a8e5cf0
+      internalID: 657311593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_111
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e5c0ae9e0c65e47aa04f80be19844d
+      internalID: 2039404149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_112
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe131400db331b542a29215a8138fed8
+      internalID: 641555660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_113
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e669d4e34c2e954daa699707f79ba00
+      internalID: -122548487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_114
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb6e32205bbb53346b726cc12806b57d
+      internalID: -640725606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: villageTiles_115
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 192
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fcd5987996350f46b978a1f8beda98f
+      internalID: 1801437467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 511cbced110cbef4a9699276d1709e97
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      villageTiles_0: 1312840639
+      villageTiles_1: -1989388860
+      villageTiles_10: -1208071507
+      villageTiles_100: -820638666
+      villageTiles_101: -2114609106
+      villageTiles_102: 928821646
+      villageTiles_103: -683718602
+      villageTiles_104: -541887253
+      villageTiles_105: 1432179729
+      villageTiles_106: -691947278
+      villageTiles_107: 399763576
+      villageTiles_108: 1176859521
+      villageTiles_109: 2147451055
+      villageTiles_11: -1748354797
+      villageTiles_110: 657311593
+      villageTiles_111: 2039404149
+      villageTiles_112: 641555660
+      villageTiles_113: -122548487
+      villageTiles_114: -640725606
+      villageTiles_115: 1801437467
+      villageTiles_116: 2116774511
+      villageTiles_117: 918805949
+      villageTiles_118: 2107516718
+      villageTiles_119: -1721132880
+      villageTiles_12: 1351818898
+      villageTiles_120: -998255745
+      villageTiles_121: 771830863
+      villageTiles_122: 1893552560
+      villageTiles_123: -1926986012
+      villageTiles_124: -1569938822
+      villageTiles_125: -511327491
+      villageTiles_126: -664495024
+      villageTiles_127: -546331721
+      villageTiles_128: 1299035316
+      villageTiles_129: 2048837326
+      villageTiles_13: -72034744
+      villageTiles_130: -772041950
+      villageTiles_131: -1413034145
+      villageTiles_132: 635808914
+      villageTiles_133: -1393791687
+      villageTiles_134: -450262369
+      villageTiles_135: -1067115513
+      villageTiles_136: 1575058392
+      villageTiles_137: 710672133
+      villageTiles_138: -731511746
+      villageTiles_139: -1698163198
+      villageTiles_14: 1624373820
+      villageTiles_140: 1259629685
+      villageTiles_141: 425330979
+      villageTiles_142: -1460442427
+      villageTiles_143: 773300465
+      villageTiles_144: -443994127
+      villageTiles_145: -1720855587
+      villageTiles_146: -430262699
+      villageTiles_147: -18530548
+      villageTiles_148: 1978176022
+      villageTiles_149: -630281975
+      villageTiles_15: 2289269
+      villageTiles_150: 813602101
+      villageTiles_151: 1241636277
+      villageTiles_152: -1772722963
+      villageTiles_153: -166731813
+      villageTiles_154: -1359554237
+      villageTiles_155: 48447499
+      villageTiles_156: -2094411170
+      villageTiles_157: 167774592
+      villageTiles_158: 1329122732
+      villageTiles_159: 423292450
+      villageTiles_16: 854648993
+      villageTiles_160: -993191333
+      villageTiles_161: 867711061
+      villageTiles_162: 1356437889
+      villageTiles_163: 1201816508
+      villageTiles_164: 794449846
+      villageTiles_165: -1663812276
+      villageTiles_166: -1743350948
+      villageTiles_167: 2017858102
+      villageTiles_168: -1661168693
+      villageTiles_169: 1918616096
+      villageTiles_17: 1331785804
+      villageTiles_170: -1378505808
+      villageTiles_171: 639089638
+      villageTiles_172: -1522355277
+      villageTiles_173: 1989479929
+      villageTiles_174: -676030916
+      villageTiles_175: 1250470465
+      villageTiles_18: -778349696
+      villageTiles_19: 550199845
+      villageTiles_2: -1366024384
+      villageTiles_20: -405512594
+      villageTiles_21: -530011675
+      villageTiles_22: -665983464
+      villageTiles_23: -1039338103
+      villageTiles_24: -1382158850
+      villageTiles_25: -1393116542
+      villageTiles_26: -42999904
+      villageTiles_27: 1037732204
+      villageTiles_28: 211800626
+      villageTiles_29: 2018299344
+      villageTiles_3: -737880219
+      villageTiles_30: 986176533
+      villageTiles_31: 916908398
+      villageTiles_32: 406584125
+      villageTiles_33: 792771521
+      villageTiles_34: -111238078
+      villageTiles_35: -831215890
+      villageTiles_36: 2091554048
+      villageTiles_37: 1441653653
+      villageTiles_38: 1823226005
+      villageTiles_39: 413843528
+      villageTiles_4: 1539304378
+      villageTiles_40: -1942742967
+      villageTiles_41: -1474593790
+      villageTiles_42: -1710890598
+      villageTiles_43: -1708527292
+      villageTiles_44: 1996068436
+      villageTiles_45: -626306432
+      villageTiles_46: 1389643666
+      villageTiles_47: -1069622349
+      villageTiles_48: -588730603
+      villageTiles_49: 629552125
+      villageTiles_5: -1519998017
+      villageTiles_50: 2052390233
+      villageTiles_51: 80052451
+      villageTiles_52: 447191532
+      villageTiles_53: 988298815
+      villageTiles_54: -519905567
+      villageTiles_55: 290834855
+      villageTiles_56: 2057654853
+      villageTiles_57: -1931652499
+      villageTiles_58: -388199970
+      villageTiles_59: -211749893
+      villageTiles_6: -1986532010
+      villageTiles_60: -138126687
+      villageTiles_61: 82523809
+      villageTiles_62: -1193606058
+      villageTiles_63: -1569164193
+      villageTiles_64: 1320776758
+      villageTiles_65: -2032500898
+      villageTiles_66: 1367093961
+      villageTiles_67: -992303416
+      villageTiles_68: 335532199
+      villageTiles_69: -571431134
+      villageTiles_7: 1948192557
+      villageTiles_70: 1732358458
+      villageTiles_71: 385681898
+      villageTiles_72: -686548394
+      villageTiles_73: -1283732145
+      villageTiles_74: -954281660
+      villageTiles_75: 774586604
+      villageTiles_76: -897155309
+      villageTiles_77: 1068118568
+      villageTiles_78: -1242303135
+      villageTiles_79: 48575279
+      villageTiles_8: 646922583
+      villageTiles_80: -700497348
+      villageTiles_81: -1880213035
+      villageTiles_82: 254821490
+      villageTiles_83: 1526949578
+      villageTiles_84: -1620888147
+      villageTiles_85: 755557355
+      villageTiles_86: -715735948
+      villageTiles_87: -566752362
+      villageTiles_88: 1415771601
+      villageTiles_89: -1538433497
+      villageTiles_9: 1272900811
+      villageTiles_90: -1243166751
+      villageTiles_91: 1558074306
+      villageTiles_92: 1609033820
+      villageTiles_93: 660940505
+      villageTiles_94: -1811539699
+      villageTiles_95: 473599734
+      villageTiles_96: -943581495
+      villageTiles_97: 1929506493
+      villageTiles_98: 889263971
+      villageTiles_99: 1978439006
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
