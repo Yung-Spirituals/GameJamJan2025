@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
-//using System.Diagnostics;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
@@ -11,14 +10,17 @@ public class CustomPlayerController : MonoBehaviour
 {
    [SerializeField] private float baseMoveSpeed = 10f;
    [SerializeField] private float sprintMultiplier = 1.5f;
-   [SerializeField] private float dodgeDistance = 3f;
+   [SerializeField] private float dodgeDistance = 2f; // Reduced from 3f
    [SerializeField] private float dodgeCooldown = 2f;
+   [SerializeField] private float dodgeDuration = 0.1f; // Reduced from 0.2f
    [SerializeField] private float dodgeInvincibilityDuration = 0.5f;
    [SerializeField] private Vector2 defaultDodgeDirection = Vector2.up;
 
    private Vector2 moveInput = Vector2.zero;
    private bool isSprinting = false;
    private bool canDodge = true;
+   private bool isDodging = false;
+   private float dodgeEndTime = 0f;
    private float lastDodgeTime = -Mathf.Infinity;
 
    // Cached animation parameter hashes for performance
@@ -34,8 +36,6 @@ public class CustomPlayerController : MonoBehaviour
    // Start is called once before the first execution of Update after the MonoBehaviour is created
    void Start()
    {
-      Debug.Log("=== CustomPlayerController Start() called ===");
-
       rb = GetComponent<Rigidbody2D>();
       if (rb == null)
       {
@@ -76,27 +76,36 @@ public class CustomPlayerController : MonoBehaviour
    {
       if (rb == null) return;
 
-      if (moveInput.magnitude < 0.1f) return;
-      float currentSpeed = isSprinting ? baseMoveSpeed * sprintMultiplier : baseMoveSpeed;
-      Vector2 movement = moveInput.normalized * currentSpeed * Time.fixedDeltaTime;
-      rb.MovePosition(rb.position + movement);
+      // Check if dodge is finished and clear velocity
+      if (isDodging && Time.time >= dodgeEndTime)
+      {
+         isDodging = false;
+         rb.linearVelocity = Vector2.zero; // Stop dodge momentum
+      }
 
-      // Handle character facing direction
-      HandleCharacterFacing(moveInput);
+      // Allow movement during dodge end phase for smoother transition
+      if (isDodging && Time.time < dodgeEndTime - 0.05f) // Allow movement in last 0.05s of dodge
+      {
+         return;
+      }
 
+      bool hasInput = moveInput.magnitude > 0.1f;
+
+      // Only perform movement if there's input
+      if (hasInput)
+      {
+         float currentSpeed = isSprinting ? baseMoveSpeed * sprintMultiplier : baseMoveSpeed;
+         Vector2 movement = moveInput.normalized * currentSpeed * Time.fixedDeltaTime;
+         rb.MovePosition(rb.position + movement);
+
+         // Handle character facing direction
+         HandleCharacterFacing(moveInput);
+      }
+
+      // Always update animator regardless of input state
       if (animator != null)
       {
-         if (moveInput.magnitude > 0.1f)
-         {
-            animator.SetBool(IsMovingHash, true);
-            // Set movement direction parameters for animator
-            animator.SetFloat("MoveX", moveInput.x);
-            animator.SetFloat("MoveY", moveInput.y);
-         }
-         else
-         {
-            animator.SetBool(IsMovingHash, false);
-         }
+         animator.SetBool(IsMovingHash, hasInput);
       }
    }
 
@@ -104,14 +113,15 @@ public class CustomPlayerController : MonoBehaviour
    {
       if (inputDirection.magnitude < 0.1f) return;
 
-      // Flip sprite horizontally based on movement direction
-      if (spriteRenderer != null)
-      {
-         if (inputDirection.x > 0.1f)
-            spriteRenderer.flipX = false; // Face right
-         else if (inputDirection.x < -0.1f)
-            spriteRenderer.flipX = true;  // Face left
-      }
+      // Flip entire game object horizontally based on movement direction
+      Vector3 scale = transform.localScale;
+
+      if (inputDirection.x > 0.1f)
+         scale.x = Mathf.Abs(scale.x); // Face right (positive scale)
+      else if (inputDirection.x < -0.1f)
+         scale.x = -Mathf.Abs(scale.x); // Face left (negative scale)
+
+      transform.localScale = scale;
    }
 
    private void HandleDodgeCooldown()
@@ -131,31 +141,23 @@ public class CustomPlayerController : MonoBehaviour
 
    public void OnMove(InputAction.CallbackContext context)
    {
-      Debug.Log($"=== OnMove called! Phase: {context.phase} ===");
-
       if (context.action == null)
       {
-         Debug.LogError("OnMove: context.action is null!");
          return;
       }
 
       Vector2 newInput = context.ReadValue<Vector2>();
       moveInput = newInput;
-
-      Debug.Log($"OnMove: Input = {moveInput}, Phase = {context.phase}");
    }
 
    public void OnSprint(InputAction.CallbackContext context)
    {
-      Debug.Log($"OnSprint called! Phase: {context.phase}, Performed: {context.performed}");
       isSprinting = context.performed;
    }
 
    public void OnDodge(InputAction.CallbackContext context)
    {
-      Debug.Log($"OnDodge called! Phase: {context.phase}, Performed: {context.performed}, CanDodge: {canDodge}");
-
-      if (context.performed && canDodge && rb != null)
+      if (context.performed && canDodge && rb != null && !isDodging)
       {
          Vector2 dodgeDirection = moveInput.normalized;
          if (dodgeDirection == Vector2.zero)
@@ -163,8 +165,13 @@ public class CustomPlayerController : MonoBehaviour
             dodgeDirection = defaultDodgeDirection;
          }
 
-         Vector2 dodgeTarget = rb.position + dodgeDirection * dodgeDistance;
-         rb.MovePosition(dodgeTarget);
+         // Start dodge state
+         isDodging = true;
+         dodgeEndTime = Time.time + dodgeDuration;
+
+         // Apply dodge force for smooth movement instead of teleport
+         float dodgeForce = dodgeDistance / dodgeDuration; // Calculate force needed
+         rb.linearVelocity = dodgeDirection * dodgeForce;
 
          StartCoroutine(DodgeInvincibility());
 
@@ -172,8 +179,6 @@ public class CustomPlayerController : MonoBehaviour
          lastDodgeTime = Time.time;
 
          animator?.SetTrigger(DodgeHash);
-
-         Debug.Log($"Dodge executed to: {dodgeTarget}");
       }
    }
 }
