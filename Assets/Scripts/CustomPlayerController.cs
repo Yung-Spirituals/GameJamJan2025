@@ -13,7 +13,6 @@ public class CustomPlayerController : MonoBehaviour
    [SerializeField] private float dodgeDistance = 2f; // Reduced from 3f
    [SerializeField] private float dodgeCooldown = 2f;
    [SerializeField] private float dodgeDuration = 0.1f; // Reduced from 0.2f
-   [SerializeField] private float dodgeInvincibilityDuration = 0.5f;
    [SerializeField] private Vector2 defaultDodgeDirection = Vector2.up;
 
    private Vector2 moveInput = Vector2.zero;
@@ -32,6 +31,7 @@ public class CustomPlayerController : MonoBehaviour
    private Animator animator;
    private SpriteRenderer spriteRenderer;
    private Collider2D playerCollider;
+   private bool movementIsLocked = false;
 
    // Start is called once before the first execution of Update after the MonoBehaviour is created
    void Start()
@@ -39,7 +39,6 @@ public class CustomPlayerController : MonoBehaviour
       rb = GetComponent<Rigidbody2D>();
       if (rb == null)
       {
-         Debug.LogError("Rigidbody2D component missing on " + gameObject.name);
          return;
       }
 
@@ -54,11 +53,9 @@ public class CustomPlayerController : MonoBehaviour
       rb.angularVelocity = 0f; // Ensure no rotation velocity
 
       animator = GetComponent<Animator>();
-      if (animator == null) Debug.Log("Animator component missing on " + gameObject.name);
 
       spriteRenderer = GetComponent<SpriteRenderer>();
       playerCollider = GetComponent<Collider2D>();
-      if (playerCollider == null) Debug.Log("Collider2D component missing on " + gameObject.name);
    }
 
    // Update is called once per frame
@@ -69,6 +66,7 @@ public class CustomPlayerController : MonoBehaviour
 
    void FixedUpdate()
    {
+      if (movementIsLocked) return;
       HandleMovement();
    }
 
@@ -132,13 +130,6 @@ public class CustomPlayerController : MonoBehaviour
       }
    }
 
-   private IEnumerator DodgeInvincibility()
-   {
-      playerCollider.enabled = false;
-      yield return new WaitForSeconds(dodgeInvincibilityDuration);
-      playerCollider.enabled = true;
-   }
-
    public void OnMove(InputAction.CallbackContext context)
    {
       if (context.action == null)
@@ -173,8 +164,6 @@ public class CustomPlayerController : MonoBehaviour
          float dodgeForce = dodgeDistance / dodgeDuration; // Calculate force needed
          rb.linearVelocity = dodgeDirection * dodgeForce;
 
-         StartCoroutine(DodgeInvincibility());
-
          canDodge = false;
          lastDodgeTime = Time.time;
 
@@ -188,5 +177,23 @@ public class CustomPlayerController : MonoBehaviour
       {
          InteractionManager.Instance.Interact();
       }
+   }
+
+   public void LockMovement()
+   {
+      movementIsLocked = true;
+      moveInput = Vector2.zero;
+      isSprinting = false;
+      rb.linearVelocity = Vector2.zero;
+      rb.angularVelocity = 0f;
+      if (animator != null)
+      {
+         animator.SetBool(IsMovingHash, false);
+      }
+   }
+
+   public void UnlockMovement()
+   {
+      movementIsLocked = false;
    }
 }

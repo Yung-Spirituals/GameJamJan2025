@@ -31,6 +31,7 @@ public class InteractionManager : MonoBehaviour
 
    public void ClearCurrentInteractable()
    {
+      if (currentInteractable == null) return;
       currentInteractable.Clear();
       currentInteractable = null;
    }

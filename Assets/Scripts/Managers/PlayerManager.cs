@@ -19,9 +19,38 @@ public class PlayerManager : MonoBehaviour
       }
    }
 
+   public void LockPlayerMovement()
+   {
+      if (player != null)
+      {
+         CustomPlayerController controller = player.GetComponent<CustomPlayerController>();
+         if (controller != null)
+         {
+            controller.LockMovement();
+         }
+      }
+   }
+
+   public void UnlockPlayerMovement()
+   {
+      if (player != null)
+      {
+         CustomPlayerController controller = player.GetComponent<CustomPlayerController>();
+         if (controller != null)
+         {
+            controller.UnlockMovement();
+         }
+      }
+   }
+
    public GameObject GetPlayer()
    {
       return player;
+   }
+
+   public Transform GetPlayerTransform()
+   {
+      return player != null ? player.transform : null;
    }
 
    public void SetPlayer(GameObject playerObj)

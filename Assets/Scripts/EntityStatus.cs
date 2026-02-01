@@ -17,7 +17,6 @@ public class EntityStatus : MonoBehaviour
    {
       if (currentHealth < 1)
       {
-         Debug.Log(gameObject.name + " has died.");
          // Handle entity death (e.g., play animation, disable controls)
          isDead = true;
       }

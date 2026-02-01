@@ -89,6 +89,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   messagePanel: {fileID: 0}
   messageText: {fileID: 0}
+  itemDisplayPanel: {fileID: 0}
+  itemDisplayText: {fileID: 0}
+  itemDisplaySpriteRenderer: {fileID: 0}
+  closeDisplayInteraction: {fileID: 5846996169766987943, guid: a25c449751bec4cce85d2b34a7dd245e, type: 3}
 --- !u!114 &8321545246777292004
 MonoBehaviour:
   m_ObjectHideFlags: 0

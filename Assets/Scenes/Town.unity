@@ -222,8 +222,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attentionIndicator: {fileID: 0}
   interactPrompt: Press E to interact
-  interactPromptUI: {fileID: 1187559739}
-  triggerCollider: {fileID: 164099633}
   isInteractable: 1
   hasInteracted: 0
 --- !u!58 &164099633
@@ -323,8 +321,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attentionIndicator: {fileID: 0}
   interactPrompt: Press E to interact
-  interactPromptUI: {fileID: 1187559739}
-  triggerCollider: {fileID: 343392604}
   isInteractable: 1
   hasInteracted: 0
 --- !u!58 &343392604
@@ -6738,8 +6734,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attentionIndicator: {fileID: 0}
   interactPrompt: Press E to interact
-  interactPromptUI: {fileID: 1187559739}
-  triggerCollider: {fileID: 1044621244}
   isInteractable: 1
   hasInteracted: 0
 --- !u!58 &1044621244
@@ -6824,7 +6818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daa006fc42ac444f79cd57eb68be3df9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: 
+  sceneToLoad: SceneOldHouse
 --- !u!114 &1071562478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6839,8 +6833,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attentionIndicator: {fileID: 0}
   interactPrompt: Press E to interact
-  interactPromptUI: {fileID: 1187559739}
-  triggerCollider: {fileID: 1071562479}
   isInteractable: 1
   hasInteracted: 0
 --- !u!58 &1071562479
@@ -6940,8 +6932,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attentionIndicator: {fileID: 0}
   interactPrompt: Press E to interact
-  interactPromptUI: {fileID: 1187559739}
-  triggerCollider: {fileID: 1176384957}
   isInteractable: 1
   hasInteracted: 0
 --- !u!58 &1176384957
@@ -6995,11 +6985,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1187559739 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8511340282523816991, guid: 9c25fb449ad284bc989b1b9cea7b047f, type: 3}
-  m_PrefabInstance: {fileID: 384101991}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1230529586
 GameObject:
   m_ObjectHideFlags: 0
@@ -7473,8 +7458,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attentionIndicator: {fileID: 0}
   interactPrompt: Press E to interact
-  interactPromptUI: {fileID: 1187559739}
-  triggerCollider: {fileID: 1368258530}
   isInteractable: 1
   hasInteracted: 0
 --- !u!58 &1368258530
@@ -7542,7 +7525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5535984380355729977, guid: e6b3e5224954e43d0bb1e955099579ce, type: 3}
       propertyPath: orthographic size
-      value: 10.708333
+      value: 10.578125
       objectReference: {fileID: 0}
     - target: {fileID: 8628529556296061317, guid: e6b3e5224954e43d0bb1e955099579ce, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10064,8 +10047,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attentionIndicator: {fileID: 0}
   interactPrompt: Press E to interact
-  interactPromptUI: {fileID: 1187559739}
-  triggerCollider: {fileID: 1896262031}
   isInteractable: 1
   hasInteracted: 0
 --- !u!58 &1896262031

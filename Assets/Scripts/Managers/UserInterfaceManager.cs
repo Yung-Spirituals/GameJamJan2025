@@ -7,6 +7,10 @@ public class UserInterfaceManager : MonoBehaviour
 
    [SerializeField] private GameObject messagePanel;
    [SerializeField] private TMPro.TextMeshProUGUI messageText;
+   [SerializeField] private GameObject itemDisplayPanel;
+   [SerializeField] private TMPro.TextMeshProUGUI itemDisplayText;
+   [SerializeField] private UnityEngine.UI.Image itemDisplaySpriteRenderer;
+   [SerializeField] private GameObject closeDisplayInteraction;
 
    private void Awake()
    {
@@ -26,32 +30,47 @@ public class UserInterfaceManager : MonoBehaviour
          GameObject[] allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
          messagePanel = Array.Find(allObjects, obj =>
             obj.name == "MessagePanel" || obj.name == "Message Panel");
-
-         if (messagePanel == null)
-            Debug.LogError("MessagePanel not found! Create a GameObject named 'MessagePanel'.");
       }
 
       if (messageText == null)
       {
          messageText = messagePanel.GetComponentInChildren<TMPro.TextMeshProUGUI>();
-         if (messageText == null)
-            Debug.LogError("TextMeshProUGUI component not found! Create one under MessagePanel.");
+      }
+
+      if (itemDisplayPanel == null)
+      {
+         // Find panel by name (works with inactive objects and prefabs)
+         GameObject[] allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
+         itemDisplayPanel = Array.Find(allObjects, obj =>
+            obj.name == "ItemDisplayPanel" || obj.name == "Item Display Panel" || obj.name == "ItemDisplay");
+      }
+
+      if (itemDisplayText == null && itemDisplayPanel != null)
+      {
+         itemDisplayText = itemDisplayPanel.GetComponentInChildren<TMPro.TextMeshProUGUI>();
+      }
+
+      if (itemDisplaySpriteRenderer == null && itemDisplayPanel != null)
+      {
+         itemDisplaySpriteRenderer = itemDisplayPanel.GetComponent<UnityEngine.UI.Image>();
+      }
+
+      if (closeDisplayInteraction == null)
+      {
+         // Find prefab by name in Resources or project
+         closeDisplayInteraction = Resources.Load<GameObject>("CloseDisplayInteraction");
       }
    }
 
    public void ShowMessage(string message)
    {
-      Debug.Log("UI Message: " + message);
-
       if (messagePanel == null)
       {
-         Debug.LogError("MessagePanel is null! Cannot show message: " + message);
          return;
       }
 
       if (messageText == null)
       {
-         Debug.LogError("MessageText is null! Cannot show message: " + message);
          return;
       }
 
@@ -66,5 +85,44 @@ public class UserInterfaceManager : MonoBehaviour
 
       if (messageText != null)
          messageText.text = "";
+   }
+
+   public void DisplayItem(Sprite itemSprite, string itemText)
+   {
+      if (itemDisplayPanel == null)
+      {
+         return;
+      }
+
+      // Activate the display element
+      itemDisplayPanel.SetActive(true);
+
+      // Set the sprite if available
+      if (itemSprite != null && itemDisplaySpriteRenderer != null)
+      {
+         itemDisplaySpriteRenderer.sprite = itemSprite;
+      }
+
+      // Set the text if available
+      if (!string.IsNullOrEmpty(itemText) && itemDisplayText != null)
+      {
+         itemDisplayText.text = itemText;
+      }
+
+      // Create close interaction prefab on player
+      if (closeDisplayInteraction != null)
+      {
+         PlayerManager.Instance.LockPlayerMovement();
+         Vector3 playerPosition = PlayerManager.Instance.GetPlayerTransform().position;
+         GameObject closeInteractionInstance = Instantiate(closeDisplayInteraction, playerPosition, Quaternion.identity);
+      }
+   }
+
+   public void HideItem()
+   {
+      if (itemDisplayPanel != null)
+      {
+         itemDisplayPanel.SetActive(false);
+      }
    }
 }

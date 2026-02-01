@@ -14,10 +14,6 @@ public class Attack : MonoBehaviour
    void Start()
    {
       entityStatus = GetComponent<EntityStatus>();
-      if (entityStatus == null)
-      {
-         Debug.LogError("EntityStatus component missing on " + gameObject.name);
-      }
    }
 
    public int GetAttackDamage()
@@ -28,15 +24,12 @@ public class Attack : MonoBehaviour
    // Method to perform an attack on a target
    public void OnAttack(InputAction.CallbackContext context)
    {
-      Debug.Log("Attack input received.");
       if (!context.performed) return;
       if (Time.time - lastAttackTime < attackCooldown)
       {
-         Debug.Log("Attack is on cooldown.");
          return;
       }
       // Perform attack logic here (e.g., detect enemies in range, apply damage)
-      Debug.Log("Player attacked dealing " + attackDamage + " damage.");
       lastAttackTime = Time.time;
 
       // Trigger attack animation on the weapon if it exists

@@ -16,10 +16,4 @@ public class GameManager : MonoBehaviour
          Destroy(gameObject);
       }
    }
-
-   public void StartGame()
-   {
-      Debug.Log("Game Started");
-      // Logic to start the game goes here
-   }
 }

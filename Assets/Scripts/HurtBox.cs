@@ -11,7 +11,6 @@ public class HurtBox : MonoBehaviour
          if (entityStatus != null)
          {
             entityStatus.TakeDamage(attack.GetAttackDamage());
-            Debug.Log(gameObject.name + " took " + attack.GetAttackDamage() + " damage from " + col.name);
          }
       }
    }

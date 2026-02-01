@@ -8,26 +8,41 @@ public class LeverInteractable : MonoBehaviour, IInteractable
    [SerializeField] private Sprite leverUpSprite;
    [SerializeField] private Sprite leverDownSprite;
    [SerializeField] private int leverID;
+   private ProgressManager progressManager;
    public void Interact()
    {
       isUp = !isUp;
       if (isUp)
       {
          spriteRenderer.sprite = leverUpSprite;
-         ProgressManager.Instance.SetProgressFlag("LeverActivated_" + leverID, true);
+         progressManager.SetProgressFlag("LeverActivated_" + leverID, false);
       }
       else
       {
          spriteRenderer.sprite = leverDownSprite;
-         ProgressManager.Instance.SetProgressFlag("LeverActivated_" + leverID, false);
+         progressManager.SetProgressFlag("LeverActivated_" + leverID, true);
       }
    }
    public void Clear() { }
    // Start is called once before the first execution of Update after the MonoBehaviour is created
    void Start()
    {
+      progressManager = ProgressManager.Instance;
+
+      if (progressManager.GetProgressFlag("SolvedPuzzle"))
+      {
+         GetComponent<Collider2D>().enabled = false;
+      }
       spriteRenderer = GetComponent<SpriteRenderer>();
-      spriteRenderer.sprite = ProgressManager.Instance.GetProgressFlag("LeverActivated_" + leverID) ? leverUpSprite : leverDownSprite;
-      isUp = ProgressManager.Instance.GetProgressFlag("LeverActivated_" + leverID);
+      spriteRenderer.sprite = progressManager.GetProgressFlag("LeverActivated_" + leverID) ? leverDownSprite : leverUpSprite;
+      isUp = !progressManager.GetProgressFlag("LeverActivated_" + leverID);
+   }
+
+   void Update()
+   {
+      if (progressManager.GetProgressFlag("SolvedPuzzle") && GetComponent<Collider2D>().enabled)
+      {
+         GetComponent<Collider2D>().enabled = false;
+      }
    }
 }
