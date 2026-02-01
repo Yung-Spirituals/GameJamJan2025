@@ -112,9 +112,16 @@ public class UserInterfaceManager : MonoBehaviour
       // Create close interaction prefab on player
       if (closeDisplayInteraction != null)
       {
-         PlayerManager.Instance.LockPlayerMovement();
-         Vector3 playerPosition = PlayerManager.Instance.GetPlayerTransform().position;
-         GameObject closeInteractionInstance = Instantiate(closeDisplayInteraction, playerPosition, Quaternion.identity);
+         if (PlayerManager.Instance != null)
+         {
+            PlayerManager.Instance.LockPlayerMovement();
+            Transform playerTransform = PlayerManager.Instance.GetPlayerTransform();
+            if (playerTransform != null)
+            {
+               Vector3 playerPosition = playerTransform.position;
+               GameObject closeInteractionInstance = Instantiate(closeDisplayInteraction, playerPosition, Quaternion.identity);
+            }
+         }
       }
    }
 

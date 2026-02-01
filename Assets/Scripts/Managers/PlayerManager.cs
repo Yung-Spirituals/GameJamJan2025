@@ -45,11 +45,19 @@ public class PlayerManager : MonoBehaviour
 
    public GameObject GetPlayer()
    {
+      if (player == null)
+      {
+         player = GameObject.FindWithTag("Player");
+      }
       return player;
    }
 
    public Transform GetPlayerTransform()
    {
+      if (player == null)
+      {
+         player = GameObject.FindWithTag("Player");
+      }
       return player != null ? player.transform : null;
    }
 
@@ -60,6 +68,10 @@ public class PlayerManager : MonoBehaviour
 
    public void RespawnPlayer(Vector3 respawnPosition)
    {
+      if (player == null)
+      {
+         player = GameObject.FindWithTag("Player");
+      }
       if (player != null)
       {
          player.transform.position = respawnPosition;

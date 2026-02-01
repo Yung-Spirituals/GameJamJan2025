@@ -4,22 +4,13 @@ public class PickupItem : MonoBehaviour
 {
    [SerializeField] private Sprite itemSprite;
    private GameObject itemInstance;
-   [SerializeField] private GameObject displayItemUiElement;
-   private UserInterfaceManager uiManager;
-
-   private void Start()
-   {
-      uiManager = UserInterfaceManager.Instance;
-   }
 
 
    public void Pickup(string pickupText, string itemCollectFlag)
    {
       // Show the item in the UI using UI manager
-      if (uiManager != null)
-      {
-         uiManager.DisplayItem(itemSprite, pickupText);
-      }
+      UserInterfaceManager.Instance.DisplayItem(itemSprite, pickupText);
+
 
       // Disable the item in the world
       if (itemInstance != null)
