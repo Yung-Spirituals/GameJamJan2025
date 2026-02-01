@@ -17,7 +17,7 @@ public class UserInterfaceManager : MonoBehaviour
       if (Instance == null)
       {
          Instance = this;
-         //DontDestroyOnLoad(gameObject);
+         DontDestroyOnLoad(gameObject);
       }
       else
       {
@@ -42,7 +42,7 @@ public class UserInterfaceManager : MonoBehaviour
          // Find panel by name (works with inactive objects and prefabs)
          GameObject[] allObjects = Resources.FindObjectsOfTypeAll<GameObject>();
          itemDisplayPanel = Array.Find(allObjects, obj =>
-            obj.name == "ItemDisplayPanel" || obj.name == "Item Display Panel" || obj.name == "ItemDisplay");
+            obj.name == "ItemDisplayPanelCanObj");
       }
 
       if (itemDisplayText == null && itemDisplayPanel != null)

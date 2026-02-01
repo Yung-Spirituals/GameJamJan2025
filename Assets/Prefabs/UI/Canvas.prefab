@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2663446950644282690}
   - component: {fileID: 1650951085711669359}
   m_Layer: 5
-  m_Name: ItemDisplayPanel
+  m_Name: ItemDisplayPanelCanObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8124700111670055190, guid: 3b863c416ec253d4fbe83cfc22284dc4, type: 3}
+  m_Sprite: {fileID: -5256508804588260846, guid: d54c2d6b865db45109de94bbb71b1dd9, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
