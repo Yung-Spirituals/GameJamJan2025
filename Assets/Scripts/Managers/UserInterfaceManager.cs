@@ -52,7 +52,7 @@ public class UserInterfaceManager : MonoBehaviour
 
       if (itemDisplaySpriteRenderer == null && itemDisplayPanel != null)
       {
-         itemDisplaySpriteRenderer = itemDisplayPanel.GetComponent<UnityEngine.UI.Image>();
+         itemDisplaySpriteRenderer = itemDisplayPanel.GetComponentInChildren<UnityEngine.UI.Image>();
       }
 
       if (closeDisplayInteraction == null)
