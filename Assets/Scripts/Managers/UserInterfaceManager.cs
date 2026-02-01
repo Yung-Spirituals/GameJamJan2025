@@ -11,6 +11,10 @@ public class UserInterfaceManager : MonoBehaviour
    [SerializeField] private TMPro.TextMeshProUGUI itemDisplayText;
    [SerializeField] private UnityEngine.UI.Image itemDisplaySpriteRenderer;
    [SerializeField] private GameObject closeDisplayInteraction;
+   [SerializeField] private GameObject imageDisplayPanel;
+   [SerializeField] private UnityEngine.UI.Image imageDisplaySpriteRenderer;
+
+   [SerializeField] private GameObject textDisplayPanel;
 
    private void Awake()
    {
@@ -104,10 +108,68 @@ public class UserInterfaceManager : MonoBehaviour
       }
 
       // Set the text if available
-      if (!string.IsNullOrEmpty(itemText) && itemDisplayText != null)
+      if (itemDisplayText != null)
       {
          itemDisplayText.text = itemText;
       }
+
+      // Create close interaction prefab on player
+      if (closeDisplayInteraction != null)
+      {
+         if (PlayerManager.Instance != null)
+         {
+            PlayerManager.Instance.LockPlayerMovement();
+            Transform playerTransform = PlayerManager.Instance.GetPlayerTransform();
+            if (playerTransform != null)
+            {
+               Vector3 playerPosition = playerTransform.position;
+               GameObject closeInteractionInstance = Instantiate(closeDisplayInteraction, playerPosition, Quaternion.identity);
+            }
+         }
+      }
+   }
+
+   public void DisplayImage(Sprite itemSprite)
+   {
+      if (imageDisplayPanel == null)
+      {
+         return;
+      }
+
+      // Activate the display element
+      imageDisplayPanel.SetActive(true);
+      // Set the sprite if available
+      if (itemSprite != null && imageDisplaySpriteRenderer != null)
+      {
+         imageDisplaySpriteRenderer.sprite = itemSprite;
+      }
+
+      // Create close interaction prefab on player
+      if (closeDisplayInteraction != null)
+      {
+         if (PlayerManager.Instance != null)
+         {
+            PlayerManager.Instance.LockPlayerMovement();
+            Transform playerTransform = PlayerManager.Instance.GetPlayerTransform();
+            if (playerTransform != null)
+            {
+               Vector3 playerPosition = playerTransform.position;
+               GameObject closeInteractionInstance = Instantiate(closeDisplayInteraction, playerPosition, Quaternion.identity);
+            }
+         }
+      }
+   }
+
+   public void DisplayText(string itemText)
+   {
+      if (textDisplayPanel == null)
+      {
+         return;
+      }
+
+      // Activate the display element
+      textDisplayPanel.SetActive(true);
+      textDisplayPanel.GetComponentInChildren<TMPro.TextMeshProUGUI>().text = itemText;
 
       // Create close interaction prefab on player
       if (closeDisplayInteraction != null)
@@ -130,6 +192,14 @@ public class UserInterfaceManager : MonoBehaviour
       if (itemDisplayPanel != null)
       {
          itemDisplayPanel.SetActive(false);
+      }
+      if (imageDisplayPanel != null)
+      {
+         imageDisplayPanel.SetActive(false);
+      }
+      if (textDisplayPanel != null)
+      {
+         textDisplayPanel.SetActive(false);
       }
    }
 }
